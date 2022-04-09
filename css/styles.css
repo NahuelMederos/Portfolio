@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap');
+
+
+#title {
+  background-color: #323232;
+  color: white;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #444444;
+
+}
+
+h1 {
+  font-weight: 900; /* black */
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.navbar {
+  background-color: #444444;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  padding: 0 3%;
+  min-height: 9vh;
+}
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2rem;
+  font-weight: normal;
+}
+.nav-item {
+  padding: 0 18px;
+}
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.icon {
+  margin: 1rem 0.8rem 2.5rem;
+  width: auto;
+  position: relative;
+  border-radius: 20%;
+  color: white;
+  z-index: 1;
+}
+
+.icon:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+
+.icon:hover{
+  transform: scale(1.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: 200ms transform; 
+}
+
+.linkedin:hover{
+  --tooltip-color: #0077B5;
+  --tooltip-font-color: white;
+  color: #0077B5 ;
+  background:radial-gradient(circle at center, white 53%, transparent 47%)
+}
+
+.github:hover{
+  --tooltip-color: white;
+  --tooltip-font-color: #333;
+  color: black ;
+  background:radial-gradient(circle at center, white 56%, transparent 50%)
+}
+
+.curriculum:hover{
+  --tooltip-font-color:#333;
+  --tooltip-color: #BD2726;
+  color: #BD2726 ;
+}
+
+.icon::before,
+.icon::after {
+  --scale: 0;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%) scale(var(--scale));
+  transition: 200ms transform;
+  transform-origin: bottom center;
+  
+}
+
+.icon::before {
+  content: attr(data-tooltip);
+  color: var(--tooltip-font-color);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--tooltip-color);
+}
+
+.icon::after {
+  margin-top: 17px;
+  content: "";
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
+
+.icon:hover::before,
+.icon:hover::after {
+  --scale: 1;
+}
+
+.cover-container {
+  max-width: 90em;
+  margin: 10% auto 1rem auto;
+  text-align: center;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+}
+
+.btn_proyectos{
+  position:relative;
+  margin-top:50%;
+  background:#444444;
+  border:1px solid #999999;
+  padding:20px;
+  font-size:0.9em;
+  color:white;
+  box-shadow:4px 4px 0px 0px white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:700;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  transition: all 300ms ease-in-out;
+  left:0;
+  top:0;
+}
+
+.btn_proyectos:hover {
+  left:4px;
+  top:4px;
+  box-shadow:0 0 0 0 white;
+}
+
+.card{}
+
