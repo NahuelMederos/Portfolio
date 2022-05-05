@@ -70,7 +70,7 @@ h1 {
 .github:hover{
   --tooltip-color: white;
   --tooltip-font-color: #333;
-  color: black ;
+  color: black;
   background:radial-gradient(circle at center, white 56%, transparent 50%)
 }
 
@@ -154,5 +154,12 @@ h1 {
   box-shadow:0 0 0 0 white;
 }
 
-.card{}
+.card{
+  max-width: 560px;
+  border: 2px solid gray;
+}
 
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
